@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment | Dry Point</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<h1>Payment</h1>
+<p>Pay for the items that you have added to your cart.</p>
+
+<hr>
+
+<h2>Navigation</h2>
+<p>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About Us</a> |
+  <a href="products.html">Products</a> |
+  <a href="cart.html">Cart</a> |
+  <a href="payment.html">Payment</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="sitemap.html">Sitemap</a>
+</p>
+
+<hr>
+
+<h3>Order summary</h3>
+<div id="order-summary"></div>
+<p id="order-total"></p>
+
+<h3>Payment details</h3>
+
+<form id="payment-form">
+  <p>
+    <label for="full-name">Full name:</label><br>
+    <input type="text" id="full-name" name="full-name" required>
+  </p>
+  <p>
+    <label for="card-number">Card number:</label><br>
+    <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
+  </p>
+  <p>
+    <label for="card-expiry">Expiry date:</label><br>
+    <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" required>
+  </p>
+  <p>
+    <label for="card-cvv">CVV:</label><br>
+    <input type="text" id="card-cvv" name="card-cvv" placeholder="123" required>
+  </p>
+  <p>
+    <a href="#" onclick="payNow(); return false;">Pay now</a>
+  </p>
+</form>
+
+<p id="payment-status"></p>
+
+<p>
+  <a href="cart.html">Back to cart</a> |
+  <a href="products.html">Continue shopping</a>
+</p>
+
+<hr>
+
+<p>&copy; <span data-year></span> Dry Point. Website demonstration.</p>
+
+</body>
+</html>

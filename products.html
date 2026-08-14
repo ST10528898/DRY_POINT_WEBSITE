@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products | Dry Point</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<h1>Dry Point Products</h1>
+<p>Select the items you want to order and add them to your cart.</p>
+
+<hr>
+
+<h2>Navigation</h2>
+<p>
+  <a href="index.html">Home</a> |
+  <a href="about.html">About Us</a> |
+  <a href="products.html">Products</a> |
+  <a href="cart.html">Cart</a> |
+  <a href="payment.html">Payment</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="sitemap.html">Sitemap</a>
+</p>
+
+<hr>
+
+<h2>Collection Alpha</h2>
+<img src="images/collection-alpha.png" alt="Dry Point Collection Alpha catalogue" width="400">
+
+<h3>Items available to order</h3>
+
+<table border="1" cellpadding="8" cellspacing="0">
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Order</th>
+  </tr>
+  <tr>
+    <td><img src="images/lunar-tapered-joggers.png" alt="Lunar Tapered Joggers" width="120"><br>Lunar Tapered Joggers</td>
+    <td>R 799.99</td>
+    <td><a href="cart.html" onclick="addToCart('Lunar Tapered Joggers', 799.99); return false;">Add to cart</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/stellar-logo-hoodie.png" alt="Stellar Logo Hoodie" width="120"><br>Stellar Logo Hoodie</td>
+    <td>R 749.99</td>
+    <td><a href="cart.html" onclick="addToCart('Stellar Logo Hoodie', 749.99); return false;">Add to cart</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/white-pique-polo.png" alt="White Pique Polo" width="120"><br>White Pique Polo</td>
+    <td>R 349.99</td>
+    <td><a href="cart.html" onclick="addToCart('White Pique Polo', 349.99); return false;">Add to cart</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/ocean-blue-merino-beanie.png" alt="Ocean Blue Merino Beanie" width="120"><br>Ocean Blue Merino Beanie</td>
+    <td>R 420.00</td>
+    <td><a href="cart.html" onclick="addToCart('Ocean Blue Merino Beanie', 420.00); return false;">Add to cart</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/signature-graphic-tee.png" alt="Signature Graphic Tee" width="120"><br>Signature Graphic Tee</td>
+    <td>R 249.00</td>
+    <td><a href="cart.html" onclick="addToCart('Signature Graphic Tee', 249.00); return false;">Add to cart</a></td>
+  </tr>
+  <tr>
+    <td><img src="images/everyday-bomber-jacket.png" alt="Everyday Bomber Jacket" width="120"><br>Everyday Bomber Jacket</td>
+    <td>R 1299.00</td>
+    <td><a href="cart.html" onclick="addToCart('Everyday Bomber Jacket', 1299.00); return false;">Add to cart</a></td>
+  </tr>
+</table>
+
+<p id="cart-message"></p>
+
+<hr>
+
+<p>
+  <a href="cart.html">View my cart</a> |
+  <a href="payment.html">Go to payment</a>
+</p>
+
+<p>&copy; <span data-year></span> Dry Point. Website demonstration.</p>
+
+</body>
+</html>
