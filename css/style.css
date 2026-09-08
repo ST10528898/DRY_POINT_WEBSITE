@@ -9,17 +9,6 @@ body {
   padding: 0;
 }
 
-/* Under construction banner */
-.under-construction {
-  background-color: #ffffcc;
-  border-bottom: 2px solid #cccc00;
-  color: #666600;
-  text-align: center;
-  font-weight: bold;
-  padding: 10px;
-  margin: 0;
-}
-
 /* Simple page container */
 .container {
   width: 90%;
@@ -104,7 +93,7 @@ main {
   color: #555555;
 }
 
-/* Interactive text links (no buttons) */
+/* Interactive text links */
 a {
   color: #126e9c;
 }
@@ -201,14 +190,6 @@ img {
   color: #126e9c;
   font-weight: bold;
   font-size: 18px;
-}
-
-/* Product enquiry text links */
-.product-info a {
-  display: inline-block;
-  margin-top: 8px;
-  font-weight: bold;
-  text-decoration: underline;
 }
 
 /* Forms */

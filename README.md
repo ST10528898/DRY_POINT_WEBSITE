@@ -51,7 +51,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 9. Test the layout in at least two browsers.
 
 ## Changelog
-
+- **v1.2.2** added the logo of the clothing brand and linked it to the headers of each page of the webisite [README UPDATING]
 - **v1.2:** Added the picture of the brand founder and introduced styling to all pages.
 - **v1.1:** Linked all pages through shared navigation, added homepage contact access, improved mobile navigation behaviour and documented the VS Code workflow.
 - **v1.0:** Created the Dry Point six-page website structure, catalogue, cart section, payment, contact page, sitemap, about page and README.
