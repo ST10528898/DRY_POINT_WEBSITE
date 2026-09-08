@@ -1,0 +1,349 @@
+/* Dry Point Website - simple beginner stylesheet */
+/* The site is still being built, so links are plain interactive text. */
+
+body {
+  background-color: WHITESMOKE;
+  font-family:'Times New Roman', Times, serif ;
+  color: #333333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Under construction banner */
+.under-construction {
+  background-color: #ffffcc;
+  border-bottom: 2px solid #cccc00;
+  color: #666600;
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Simple page container */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* Header and navigation */
+.site-header {
+  background-color: #1e6b4f;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.brand {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.brand span {
+  display: block;
+  font-size: 14px;
+  color: #a8e6cf;
+}
+
+.primary-nav {
+  margin-top: 10px;
+}
+
+.primary-nav a {
+  color: #ffffff;
+  text-decoration: underline;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+.primary-nav a:hover {
+  background-color: #124735;
+}
+
+.primary-nav a[aria-current="page"] {
+  background-color: #126e9c;
+}
+
+/* Hide the menu button on large screens */
+.nav-toggle {
+  display: none;
+}
+
+/* Headings */
+h1 {
+  color: #1e6b4f;
+  text-align: center;
+}
+
+h2 {
+  color: #126e9c;
+}
+
+h3 {
+  color: #1e6b4f;
+}
+h4 {
+  color: #1e6b4f;
+}
+
+/* Main content */
+main {
+  padding: 20px 0;
+}
+
+.eyebrow {
+  text-align: center;
+  color: #126e9c;
+  font-weight: bold;
+}
+
+.lede {
+  text-align: center;
+  color: #555555;
+}
+
+/* Interactive text links (no buttons) */
+a {
+  color: #126e9c;
+}
+
+a:hover {
+  color: #1e6b4f;
+}
+
+.actions {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.actions a {
+  display: inline-block;
+  margin: 5px 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Cards */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+/* Grids */
+.grid-3, .product-grid, .contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-3 > *,
+.product-grid > *,
+.contact-grid > * {
+  width: 30%;
+  margin: 10px;
+}
+
+.grid-2, .about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-2 > *,
+.about-layout > * {
+  width: 45%;
+  margin: 10px;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.feature-image {
+  border: 3px solid #1e6b4f;
+}
+
+.hero-card {
+  background-color: #ffffff;
+  border: 2px solid #1e6b4f;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Product cards */
+.product-visual {
+  background-color: #1e6b4f;
+  color: #ffffff;
+  text-align: center;
+  padding: 30px 10px;
+  font-weight: bold;
+}
+
+.visual-blue {
+  background-color: #126e9c;
+}
+
+.visual-black {
+  background-color: #333333;
+}
+
+.visual-beige {
+  background-color: #b89c78;
+}
+
+.price {
+  color: #126e9c;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Product enquiry text links */
+.product-info a {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Forms */
+.form-card {
+  background-color: #ffffff;
+  border: 2px solid #1e6b4f;
+  padding: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-status {
+  color: #1e6b4f;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Contact page */
+.contact-card {
+  text-align: center;
+}
+
+.icon-badge {
+  display: inline-block;
+  background-color: #126e9c;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.map-link {
+  color: #126e9c;
+  font-weight: bold;
+}
+
+/* Sitemap */
+.sitemap {
+  text-align: center;
+}
+
+.sitemap-root, .sitemap-node {
+  display: inline-block;
+  background-color: #1e6b4f;
+  color: #ffffff;
+  padding: 12px 20px;
+  margin: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sitemap-node {
+  background-color: #126e9c;
+}
+
+.notice {
+  background-color: #ffffff;
+  border-left: 5px solid #126e9c;
+  padding: 10px 15px;
+  margin-top: 15px;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #124735;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+.site-footer a {
+  color: #ffffff;
+}
+
+.small {
+  font-size: 14px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  text-align: center;
+  color: #666666;
+}
+
+/* Simple responsive rules */
+@media (max-width: 800px) {
+  .grid-3 > *, .product-grid > *, .contact-grid > * {
+    width: 45%;
+  }
+  .grid-2 > *, .about-layout > * {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3 > *, .product-grid > *, .contact-grid > *,
+  .grid-2 > *, .about-layout > * {
+    width: 100%;
+    margin: 8px 0;
+  }
+  .nav-toggle {
+    display: inline-block;
+    background-color: #126e9c;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .primary-nav {
+    display: none;
+  }
+  .primary-nav.is-open {
+    display: block;
+  }
+  .primary-nav a {
+    display: block;
+    padding: 10px;
+  }
+}
