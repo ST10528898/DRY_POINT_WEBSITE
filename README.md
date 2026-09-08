@@ -2,7 +2,7 @@
 
 **Student:** Bongokuhle Awande Siphesihle Sithebe  
 **Student number:** ST10528898  
-**Module:** WEDE5020  
+**Module:** WEDE5020 (WEB DEVELOPMENT)  
 **Project:** Dry Point Clothing Store Website  
 **Version:** 1.2.1
 
@@ -11,22 +11,21 @@
 Dry Point is a boutique clothing retailer founded in 2023 by Sibusiso Khumalo in Ladysmith, KwaZulu-Natal. The website extends the business beyond the physical store by providing a product catalogue, a cart where customers can select and view items they want to order, a payment section, contact information and a clear brand identity.
 
 ## Website goals and objectives
-
-- Launch a transactional-ready online clothing experience.
-- Extend Dry Point beyond its local market.
-- Increase online sales by 30% within the first year.
-- Grow the email subscriber list and customer loyalty.
-- Provide clear product, pricing, cart, payment and contact information.
+Launch a transactional-ready online clothing experience.
+Extend Dry Point beyond its local market.
+Increase online sales by 30% within the first year.
+Grow the email subscriber list and customer loyalty.
+Provide clear product, pricing, cart, payment and contact information.
 
 ## Pages and sitemap
+`index.html`: homepage with introduction and quick links.
+`about.html`: organisation history, mission and vision.
+`products.html`: Collection Alpha catalogue with prices and add-to-cart links.
+`cart.html`: shows the items the customer has selected to order.
+`payment.html`: payment details form and order summary.
+`contact.html`: phone, email, address and map links.
+`sitemap.html`: visual sitemap of the website pages.
 
-- `index.html`: homepage with introduction and quick links.
-- `about.html`: organisation history, mission and vision.
-- `products.html`: Collection Alpha catalogue with prices and add-to-cart links.
-- `cart.html`: shows the items the customer has selected to order.
-- `payment.html`: payment details form and order summary.
-- `contact.html`: phone, email, address and map links.
-- `sitemap.html`: visual sitemap of the website pages.
 
 ## Running the website in VS Code
 
@@ -35,7 +34,7 @@ Dry Point is a boutique clothing retailer founded in 2023 by Sibusiso Khumalo in
 3. Use the navigation links to move between pages.
 4. On the Products page, click an "Add to cart" link, then open the Cart page to view the selected items.
 5. On the Cart page, change the quantities and then go to the Payment page to pay.
-6. Keep the folder structure unchanged so relative paths such as `css/styles.css`, `js/script.js` and `images/...` continue to work.
+6. Keep the folder structure unchanged so relative paths such as `js/script.js` and `images/...` continue to work.
 
 ## Navigation and testing
 
