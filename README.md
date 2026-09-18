@@ -31,6 +31,20 @@ Headings use a responsive `clamp()` scale and a serif display font. Body text us
 ## /*Layout structure*/
 The stylesheet uses Flexbox for the navigation and action links. It uses CSS Grid for reusable two-column and three-column layouts, including `.grid-2`, `.grid-3`, `.product-grid`, `.contact-grid` and `.about-layout`. The current catalogue and cart tables are kept accessible and are allowed to scroll horizontally on narrow screens instead of forcing the page outside the viewport.
 
+## Screenshot evidence
+
+Responsive screenshots are included in the `evidence` folder:
+
+-desktop-home.png
+-desktop-about-us.png
+-desktop-contact.png
+-desktop-products.png
+-mobile-home.png
+-mobile-about-us.png
+-mobile-contact.png
+-mobile-products.png
+
+
 ## Running the website in VS Code
 
 1. Open the `dry-point-website` folder in VS Code.
