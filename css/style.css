@@ -1,330 +1,565 @@
-/* Dry Point Website - simple beginner stylesheet */
-/* The site is still being built, so links are plain interactive text. */
+/*
+  Dry Point Clothing Store
+  Part 2: CSS styling and responsive design
+  The stylesheet is shared by every HTML page in this project.
+*/
+
+/* 1. CSS reset and design tokens */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --green-900: #103b2f;
+  --green-700: #1e6b4f;
+  --green-500: #2d8a68;
+  --blue-700: #126e9c;
+  --blue-100: #e9f4f8;
+  --ink: #030303;
+  --muted: #5b6770;
+  --paper: beige;
+  --canvas: #f4f7f5;
+  --line: #d7e1dc;
+  --accent: #e7b65c;
+  --danger: #a43d3d;
+  --radius: 0.85rem;
+  --shadow: 0 0.6rem 1.5rem rgba(16, 59, 47, 0.10);
+  --content-width: 72rem;
+}
+
+html {
+  background: var(--canvas);
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: WHITESMOKE;
-  font-family:'Times New Roman', Times, serif ;
-  color: #333333;
-  margin: 0;
-  padding: 0;
-}
-
-/* Simple page container */
-.container {
-  width: 90%;
+  width: min(100% - 2rem, var(--content-width));
+  min-height: 100vh;
   margin: 0 auto;
-  max-width: 1000px;
+  padding: 0 0 2rem;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.banner {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--green-900);
+  color: #fff;
+  text-align: center;
 }
 
-/* Header and navigation */
+
+/* 2. Typography */
+h1,
+h2,
+h3,
+h4 {
+  margin-block: 1.25rem 0.65rem;
+  line-height: 1.2;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+h1 {
+  color: var(--green-900);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  color: var(--blue-700);
+  font-size: clamp(1.45rem, 2.5vw, 2rem);
+}
+
+h3 {
+  color: var(--green-700);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+h4 {
+  color: var(--green-700);
+  font-size: 1.1rem;
+}
+
+p,
+ul,
+form,
+table {
+  margin-block: 0 1rem;
+}
+
+p {
+  max-width: 68rem;
+}
+
+strong {
+  color: var(--green-900);
+}
+
+/* The logo is inside its own heading in the existing Part 1 pages. */
+h1:has(> img) {
+  margin-block: 1rem 0;
+  line-height: 0;
+}
+
+h1:has(> img) img {
+  width: min(12rem, 55vw);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* 3. Shared links and interaction states */
+a {
+  color: var(--blue-700);
+  font-weight: 700;
+  text-underline-offset: 0.18em;
+  transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+a:visited {
+  color: #345f78;
+}
+
+a:hover {
+  color: var(--green-700);
+}
+
+a:focus-visible {
+  outline: 0.2rem solid var(--accent);
+  outline-offset: 0.15rem;
+  border-radius: 0.25rem;
+}
+
+a:active {
+  color: var(--green-900);
+  transform: translateY(0.05rem);
+}
+
+/* Navigation is the paragraph immediately after the Navigation heading. */
+body > hr + h2 + p{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0 auto 1.5rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--green-900);
+  text-align: center;
+}
+
+body > hr + h2 + p a {
+  display: inline-block;
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.45rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+body > hr + h2 + p a:hover,
+body > hr + h2 + p a:focus-visible {
+  background: var(--green-500);
+  color: #fff;
+}
+
+/* 4. Spacing, separators, and responsive images */
+hr {
+  height: 0.18rem;
+  margin: 1.75rem 0;
+  border: 0;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, transparent, var(--green-500), transparent);
+}
+
+img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin: 1rem auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Existing width attributes are retained as fallbacks, while this rule keeps images fluid. */
+img[alt*='Collection'],
+img[alt*='About Us'],
+img[alt*='contact information'] {
+  width: min(100%, 42rem);
+}
+
+body > p:last-of-type {
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* 5. Home, about, contact, and sitemap content */
+body > h1:first-of-type:not(:has(> img)) {
+  padding: 1.5rem 1rem;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: linear-gradient(135deg, var(--green-900), var(--green-700));
+  color: #fff;
+}
+
+body > ul {
+  max-width: 48rem;
+  margin-inline: auto;
+  padding: 1.25rem 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--canvas);
+}
+
+body > ul li {
+  margin-block: 0.4rem;
+}
+
+/* 6. Product and cart tables */
+table {
+  width: 100%;
+  min-width: 42rem;
+  border: 1px solid var(--line);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--radius);
+  background: var(--paper);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* Allows wide catalogue and cart tables to scroll rather than break the mobile layout. */
+body:has(table) {
+  overflow-x: hidden;
+}
+
+table th,
+table td {
+  padding: 0.85rem 0.75rem;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: middle;
+}
+
+table th {
+  background: var(--green-900);
+  color: #fff;
+  font-size: 0.95rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+table tr:nth-child(even) td {
+  background: var(--canvas);
+}
+
+table tr:hover td {
+  background: var(--blue-100);
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table th:last-child,
+table td:last-child {
+  border-right: 0;
+}
+
+table td img {
+  width: clamp(5rem, 12vw, 8rem);
+  margin: 0 auto 0.5rem;
+  border-radius: 0.55rem;
+  box-shadow: none;
+}
+
+table a {
+  display: inline-block;
+  padding: 0.25rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+table a:hover,
+table a:focus-visible {
+  background: var(--blue-100);
+}
+
+/* The generated cart and payment tables are inserted into these containers. */
+#cart-contents,
+#order-summary {
+  width: 100%;
+  margin-block: 1rem;
+  overflow-x: auto;
+  border-radius: var(--radius);
+}
+
+#cart-total,
+#order-total,
+#cart-message,
+#payment-status {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 0.35rem solid var(--green-500);
+  border-radius: 0.35rem;
+  background: var(--blue-100);
+}
+
+#cart-message:empty,
+#payment-status:empty {
+  display: none;
+}
+
+/* 7. Payment form */
+#payment-form {
+  max-width: 42rem;
+  margin: 1.5rem auto;
+  padding: clamp(1rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--canvas);
+  box-shadow: var(--shadow);
+}
+
+#payment-form p {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  color: var(--green-900);
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #9aaba4;
+  border-radius: 0.45rem;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--green-500);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--blue-700);
+  outline: 0.2rem solid rgba(18, 110, 156, 0.2);
+}
+
+#payment-form a[onclick] {
+  display: inline-block;
+  padding: 0.65rem 1.1rem;
+  border: 0.1rem solid var(--green-900);
+  border-radius: 0.45rem;
+  background: var(--green-700);
+  color: #fff;
+  text-decoration: none;
+}
+
+#payment-form a[onclick]:hover,
+#payment-form a[onclick]:focus-visible {
+  background: var(--green-900);
+  box-shadow: 0 0.3rem 0.8rem rgba(16, 59, 47, 0.2);
+}
+
+/* 8. Reusable classes retained for expanded pages and future components */
+.container {
+  width: min(100% - 2rem, 68rem);
+  margin-inline: auto;
+}
+
 .site-header {
-  background-color: #1e6b4f;
-  padding: 15px 0;
+  padding: 1rem;
+  background: var(--green-900);
   text-align: center;
 }
 
 .brand {
-  color: #ffffff;
-  font-size: 28px;
-  font-weight: bold;
+  color: #fff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
   text-decoration: none;
 }
 
-.brand span {
-  display: block;
-  font-size: 14px;
-  color: #a8e6cf;
-}
-
 .primary-nav {
-  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.8rem;
 }
 
 .primary-nav a {
-  color: #ffffff;
-  text-decoration: underline;
-  padding: 8px 12px;
-  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  color: #fff;
+  text-decoration: none;
 }
 
-.primary-nav a:hover {
-  background-color: #124735;
+.primary-nav a:hover,
+.primary-nav a[aria-current='page'] {
+  background: var(--green-500);
+  border-radius: 0.4rem;
 }
 
-.primary-nav a[aria-current="page"] {
-  background-color: #126e9c;
-}
-
-/* Hide the menu button on large screens */
 .nav-toggle {
   display: none;
 }
 
-/* Headings */
-h1 {
-  color: #1e6b4f;
-  text-align: center;
+.grid-2,
+.grid-3,
+.product-grid,
+.contact-grid,
+.about-layout {
+  display: grid;
+  gap: 1rem;
 }
 
-h2 {
-  color: #126e9c;
+.grid-2,
+.about-layout {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-h3 {
-  color: #1e6b4f;
-}
-h4 {
-  color: #1e6b4f;
-}
-
-/* Main content */
-main {
-  padding: 20px 0;
+.grid-3,
+.product-grid,
+.contact-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.eyebrow {
-  text-align: center;
-  color: #126e9c;
-  font-weight: bold;
-}
-
-.lede {
-  text-align: center;
-  color: #555555;
-}
-
-/* Interactive text links */
-a {
-  color: #126e9c;
-}
-
-a:hover {
-  color: #1e6b4f;
+.card,
+.hero-card,
+.form-card {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow);
 }
 
 .actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-block: 1rem;
   text-align: center;
-  margin: 15px 0;
 }
 
 .actions a {
-  display: inline-block;
-  margin: 5px 10px;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/* Cards */
-.card {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  padding: 15px;
-  margin: 10px 0;
-}
-
-/* Grids */
-.grid-3, .product-grid, .contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.grid-3 > *,
-.product-grid > *,
-.contact-grid > * {
-  width: 30%;
-  margin: 10px;
-}
-
-.grid-2, .about-layout {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.grid-2 > *,
-.about-layout > * {
-  width: 45%;
-  margin: 10px;
-}
-
-/* Images */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.feature-image {
-  border: 3px solid #1e6b4f;
-}
-
-.hero-card {
-  background-color: #ffffff;
-  border: 2px solid #1e6b4f;
-  padding: 10px;
-  text-align: center;
-}
-
-/* Product cards */
-.product-visual {
-  background-color: #1e6b4f;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px 10px;
-  font-weight: bold;
-}
-
-.visual-blue {
-  background-color: #126e9c;
-}
-
-.visual-black {
-  background-color: #333333;
-}
-
-.visual-beige {
-  background-color: #b89c78;
-}
-
-.price {
-  color: #126e9c;
-  font-weight: bold;
-  font-size: 18px;
-}
-
-/* Forms */
-.form-card {
-  background-color: #ffffff;
-  border: 2px solid #1e6b4f;
-  padding: 20px;
-}
-
-.field {
-  margin-bottom: 15px;
-}
-
-label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #999999;
-  border-radius: 4px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.form-status {
-  color: #1e6b4f;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-/* Contact page */
-.contact-card {
-  text-align: center;
-}
-
-.icon-badge {
-  display: inline-block;
-  background-color: #126e9c;
-  color: #ffffff;
-  padding: 8px 12px;
-  border-radius: 50%;
-  font-weight: bold;
-}
-
-.map-link {
-  color: #126e9c;
-  font-weight: bold;
-}
-
-/* Sitemap */
-.sitemap {
-  text-align: center;
-}
-
-.sitemap-root, .sitemap-node {
-  display: inline-block;
-  background-color: #1e6b4f;
-  color: #ffffff;
-  padding: 12px 20px;
-  margin: 8px;
-  border-radius: 5px;
+  padding: 0.55rem 0.9rem;
+  border-radius: 0.4rem;
+  background: var(--green-700);
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
 }
 
-.sitemap-node {
-  background-color: #126e9c;
+.actions a:hover,
+.actions a:focus-visible {
+  background: var(--green-900);
 }
 
-.notice {
-  background-color: #ffffff;
-  border-left: 5px solid #126e9c;
-  padding: 10px 15px;
-  margin-top: 15px;
-}
-
-/* Footer */
-.site-footer {
-  background-color: #124735;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 30px;
-}
-
-.site-footer a {
-  color: #ffffff;
-}
-
-.small {
-  font-size: 14px;
-}
-
-/* Breadcrumb */
-.breadcrumb {
-  text-align: center;
-  color: #666666;
-}
-
-/* Simple responsive rules */
-@media (max-width: 800px) {
-  .grid-3 > *, .product-grid > *, .contact-grid > * {
-    width: 45%;
+/* 9. Responsive breakpoints: desktop, tablet, and mobile */
+@media (max-width: 56.25rem) {
+  body {
+    width: min(100% - 1.25rem, var(--content-width));
   }
-  .grid-2 > *, .about-layout > * {
-    width: 90%;
+
+  .grid-3,
+  .product-grid,
+  .contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  table {
+    min-width: 38rem;
   }
 }
 
-@media (max-width: 600px) {
-  .grid-3 > *, .product-grid > *, .contact-grid > *,
-  .grid-2 > *, .about-layout > * {
-    width: 100%;
-    margin: 8px 0;
+@media (max-width: 40rem) {
+  html {
+    font-size: 95%;
   }
-  .nav-toggle {
-    display: inline-block;
-    background-color: #126e9c;
-    color: #ffffff;
-    border: none;
-    padding: 8px 14px;
-    border-radius: 4px;
-    cursor: pointer;
+
+  body {
+    width: min(100% - 1rem, var(--content-width));
+    padding-bottom: 1rem;
   }
-  .primary-nav {
-    display: none;
+
+  h1 {
+    font-size: clamp(1.8rem, 9vw, 2.5rem);
   }
-  .primary-nav.is-open {
-    display: block;
+
+  h2 {
+    font-size: clamp(1.3rem, 7vw, 1.8rem);
   }
-  .primary-nav a {
-    display: block;
-    padding: 10px;
+
+  body > hr + h2 + p {
+    justify-content: stretch;
+    gap: 0.15rem;
+    padding: 0.5rem;
+  }
+
+  body > hr + h2 + p a {
+    flex: 1 1 7rem;
+    padding: 0.55rem 0.3rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .product-grid,
+  .contact-grid,
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  table {
+    min-width: 34rem;
+    font-size: 0.9rem;
+  }
+
+  table th,
+  table td {
+    padding: 0.65rem 0.5rem;
+  }
+
+  #payment-form {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }

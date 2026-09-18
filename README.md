@@ -4,7 +4,7 @@
 **Student number:** ST10528898  
 **Module:** WEDE5020 (WEB DEVELOPMENT)  
 **Project:** Dry Point Clothing Store Website  
-**Version:** 1.2.1
+**Version:** 2.0
 
 ## Project overview
 
@@ -26,6 +26,10 @@ Provide clear product, pricing, cart, payment and contact information.
 `contact.html`: phone, email, address and map links.
 `sitemap.html`: visual sitemap of the website pages.
 
+## /*Typography*/
+Headings use a responsive `clamp()` scale and a serif display font. Body text uses a readable sans-serif font. The stylesheet also controls heading colour, line height, letter spacing, paragraph spacing and link readability.
+## /*Layout structure*/
+The stylesheet uses Flexbox for the navigation and action links. It uses CSS Grid for reusable two-column and three-column layouts, including `.grid-2`, `.grid-3`, `.product-grid`, `.contact-grid` and `.about-layout`. The current catalogue and cart tables are kept accessible and are allowed to scroll horizontally on narrow screens instead of forcing the page outside the viewport.
 
 ## Running the website in VS Code
 
@@ -51,6 +55,20 @@ All pages are linked through the navigation links at the top of each page. Befor
 9. Test the layout in at least two browsers.
 
 ## Changelog
+-**v2.0**
+added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
+Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
+Replaced the default Times New Roman body styling with a readable sans-serif body font and responsive Georgia heading styles.
+Added responsive typography using `clamp()` so headings scale between desktop, tablet and mobile widths.
+Styled the existing navigation paragraphs as wrapped navigation bars with hover and keyboard focus states.
+Added Flexbox rules for navigation and action links, and CSS Grid rules for reusable two-column and three-column layouts.
+Styled product, cart and order-summary tables with readable headings, alternating row colours, hover feedback, borders and mobile horizontal scrolling.
+Styled the payment form, labels, inputs, validation status and payment action link.
+Added fluid image rules using `max-width: 100%`, `height: auto` and responsive image widths to prevent overflow and distortion.
+Added a tablet breakpoint at `56.25rem` and a mobile breakpoint at `40rem`.
+Added mobile layout changes that switch reusable grids to one column, wrap navigation links and compact table and form spacing.
+Added a reduced-motion media query to respect users who disable animation effects.
+Added a detailed testing checklist and screenshot evidence requirements for desktop, tablet and mobile devices.
 - **v1.2.4** added a picture of the online store manager
 - **v1.2.3** added new products to the products page. 
 - **v1.2.2** added the logo of the clothing brand and linked it to the headers of each page of the webisite [README UPDATING]
