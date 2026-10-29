@@ -564,3 +564,61 @@ textarea:focus {
     animation-iteration-count: 1 !important;
   }
 }
+.dp-product-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+  margin: 1rem 0;
+}
+.dp-product-controls label{
+  flex:1 1 14rem;
+}
+.dp-product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(14rem,1fr));
+  gap:1.5rem;
+}
+.dp-product-card{
+  padding:1rem;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+.dp-product-image{
+  width:100%;
+  height:15rem;
+  object-fit:contain;
+  cursor:zoom-in;
+}
+img[data-lightbox="true"]{
+  cursor:zoom-in;
+}
+.dp-button{
+  padding:0.55rem 0.75rem;
+  border:0;
+  border-radius:0.4rem;
+  background:var(--green-700);
+  color:#fff;
+  font: inherit;
+  cursor:pointer;
+}
+.dp-button:focus-visible, 
+.dp-lightbox-close:focus-visible{
+  outline:0.2rem solid var(--accent);
+  outline-offset:0.15rem;
+}
+.dp-product-search, .dp-product-sort, .dp-quantity { padding:.55rem; border:1px solid var(--line); border-radius:.35rem; font:inherit; }
+.dp-map { margin:1.5rem 0; }
+.dp-map-frame { display:block; width:100%; min-height:22rem; border:0; border-radius:var(--radius); }
+.dp-lightbox { width:min(92vw,60rem); max-width:92vw; max-height:92vh; padding:1rem; border:0; border-radius:var(--radius); background:#fff; }
+.dp-lightbox::backdrop { background:rgba(0,0,0,.78); }
+.dp-lightbox-image { display:block; max-width:100%; max-height:75vh; margin:1rem auto; object-fit:contain; }
+.dp-lightbox-close { display:block; margin-left:auto; padding:.5rem .75rem; }
+.dp-field-error { display:block; color:var(--danger); }
+[aria-invalid="true"] { border-color:var(--danger); }
+.dp-form-status[data-state="error"] { color:var(--danger); }
+.dp-demo-notice { padding:.75rem; border-left:.3rem solid var(--accent); background:var(--blue-100); }
+.dp-reveal { opacity:0; transform:translateY(.6rem); transition:opacity .35s ease, transform .35s ease; }
+.dp-reveal.is-visible { opacity:1; transform:none; }
+@media (prefers-reduced-motion:reduce) { .dp-reveal { opacity:1; transform:none; transition:none; } }
