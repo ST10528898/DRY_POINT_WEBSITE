@@ -69,6 +69,9 @@ All pages are linked through the navigation links at the top of each page. Befor
 9. Test the layout in at least two browsers.
 
 ## Changelog
+**v3.0**
+=> Updated the contact details into a more advanced form
+
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
