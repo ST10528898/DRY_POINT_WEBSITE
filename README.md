@@ -71,7 +71,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 ## Changelog
 **v3.0**
 => Updated the contact details into a more advanced form
-
+=> created a new html page called enquiry for all the enquiries made to the store
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.

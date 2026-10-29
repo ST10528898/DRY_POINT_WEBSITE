@@ -1,0 +1,37 @@
+<h1>Product and service enquiries</h1>
+<p>Ask Dry Point about a product, service, sponsorship or volunteering.</p>
+
+<form id="enquiry-form"
+      data-site-form="enquiry"
+      data-recipient="st10528898@rcconnect.edu.za"
+      action="mailto:st10528898@rcconnect.edu.za"
+      method="post"
+      enctype="text/plain">
+  <p>
+    <label for="enquiry-name">Full name</label>
+    <input id="enquiry-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name">
+  </p>
+  <p>
+    <label for="enquiry-email">Email address</label>
+    <input id="enquiry-email" name="email" type="email" required maxlength="120" autocomplete="email">
+  </p>
+  <p>
+    <label for="enquiry-phone">Phone number</label>
+    <input id="enquiry-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+27 78 000 0000">
+  </p>
+  <p>
+    <label for="enquiry-interest">What is your enquiry about?</label>
+    <select id="enquiry-interest" name="interest" required>
+      <option value="">Choose one</option>
+      <option>Product availability or price</option>
+      <option>Store services</option>
+      <option>Volunteering</option>
+      <option>Sponsorship</option>
+    </select>
+  </p>
+  <p>
+    <label for="enquiry-message">Tell us what you need</label>
+    <textarea id="enquiry-message" name="message" required minlength="10" maxlength="1500" rows="6"></textarea>
+  </p>
+  <button type="submit">Prepare enquiry email</button>
+</form>
