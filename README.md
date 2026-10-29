@@ -74,6 +74,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => created a new html page called enquiry for all the enquiries made to the store
 => linked the enquiry page with the stylesheet for a better look
 => added a logo image to the enquiry page and the enquiry button to the navigation bar and also to the web structure 
+=> added an FAQ section on the about page 
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
