@@ -75,6 +75,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => linked the enquiry page with the stylesheet for a better look
 => added a logo image to the enquiry page and the enquiry button to the navigation bar and also to the web structure 
 => added an FAQ section on the about page and added a new style section on the stylesheet. linked the enquiry page to all the navigation bars of every html page and added the navigation of every other html page to the enquiry page
+=> Added new meta data and updated the titles of all html pages. Used the meta description tag to explain more about each of the html pages 
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
