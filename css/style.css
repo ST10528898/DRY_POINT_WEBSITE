@@ -157,6 +157,30 @@ body > hr + h2 + p{
   background: var(--green-900);
   text-align: center;
 }
+.navbar{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin: 0 auto 1.5rem;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--green-900);
+  text-align: center;
+}
+
+.navbar a{
+ margin: 0 8px;
+  color: #8dbbf5;
+  text-decoration: none;
+}
+
+.navbar a:hover{
+  color: #fff;
+  text-decoration: underline;
+}
 
 body > hr + h2 + p a {
   display: inline-block;
