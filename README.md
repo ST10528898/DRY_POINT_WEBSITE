@@ -4,7 +4,7 @@
 **Student number:** ST10528898  
 **Module:** WEDE5020 (WEB DEVELOPMENT)  
 **Project:** Dry Point Clothing Store Website  
-**Version:** 2.0
+**Version:** 3.0
 
 ## Project overview
 
@@ -79,6 +79,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => added a meta ROBOTS tag on the cart and payment Page. Created new helper files called robots.txt and sitemap.xml to help guide search engine robots around my website. Added styling to the navigation bar on the enquiry page with a new style inset on the stylesheet  
 => Added a javascript file and linked it across all html pages and also added new products to the catalog 
 => compressed the images from png to jpeg. Linked the to all pages that had png images 
+=> updated the meta keywords content on every html page. 
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
