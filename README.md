@@ -89,6 +89,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => Added plain-English validation messages and a personalised confirmation after the form is sent using javascript
 => Added radio group, consent and newsletter checkboxes and form service fields to contact and enquiry forms and added styling to thse additions
 => FIxed the contant and enquiry page in the fields of sending a message to the store or sending an equiry.
+=> Compressed all images from png to jpeg for faster loading time and update thier links to all the html pages that contain them 
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
