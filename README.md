@@ -84,6 +84,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => Embed interactive maps for store and collection area in contact page with directions link.
 => Add previous/next buttons, arrow-key navigation and image counter to gallery lightbox on javascript and the stylesheet
 => Added no-results message to product search and live cart item count in navigation
+=> Added plain-English validation messages and a personalised confirmation after the form is sent using javascript
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.

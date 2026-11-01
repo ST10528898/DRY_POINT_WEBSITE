@@ -392,6 +392,31 @@
     }
   }
 
+  function friendlyMessage(field) {
+    const validity = field.validity;
+    if (validity.customError) return field.validationMessage;
+
+    const labelText = field.labels && field.labels[0]
+      ? field.labels[0].textContent.replace(/\s+/g, " ").trim()
+      : "This field";
+
+    if (validity.valueMissing) {
+      if (field.type === "checkbox") return "Please tick this box to continue.";
+      if (field.tagName === "SELECT") return `Please choose an option for "${labelText}".`;
+      return `${labelText} is required.`;
+    }
+    if (validity.typeMismatch && field.type === "email") {
+      return "Enter a valid email address, for example name@example.com.";
+    }
+    if (validity.tooShort) {
+      return `${labelText} needs at least ${field.minLength} characters (you have ${field.value.length}).`;
+    }
+    if (validity.tooLong) {
+      return `${labelText} must be ${field.maxLength} characters or fewer.`;
+    }
+    return field.validationMessage;
+  }
+
   function validateField(field) {
     if (!field.matches("input, textarea, select") || field.disabled) return true;
 
@@ -414,9 +439,8 @@
       }
     }
 
-    const valid = field.checkValidity();
-    setFieldError(field, valid ? "" : field.validationMessage);
-    return valid;
+        const valid = field.checkValidity();
+    setFieldError(field, valid ? "" : friendlyMessage(field));
   }
 
   function validateForm(form) {
@@ -492,24 +516,34 @@
         }
 
         const endpoint = validAjaxEndpoint(form);
-        if (endpoint) {
+         if (endpoint) {
+          const submitButton = form.querySelector('[type="submit"]');
+          if (submitButton) submitButton.disabled = true;
           status.textContent = "Sending your message…";
           status.dataset.state = "pending";
           try {
+            const formData = new FormData(form);
             const response = await fetch(endpoint, {
               method: (form.method || "post").toUpperCase(),
-              body: new FormData(form),
+              body: formData,
               headers: { Accept: "application/json" },
               credentials: "omit"
             });
             if (!response.ok) throw new Error("The form service returned an error.");
-            status.textContent = "Your message was submitted successfully.";
+            const senderName = String(formData.get("name") || "").trim();
+            const senderEmail = String(formData.get("email") || "").trim();
+            const topic = String(formData.get("interest") || formData.get("messageType") || "").trim();
+            status.textContent = `Thank you${senderName ? `, ${senderName}` : ""}. ` +
+              `Your message${topic ? ` about "${topic}"` : ""} has been sent. ` +
+              `We will reply to ${senderEmail} as soon as we can.`;
             status.dataset.state = "success";
             form.reset();
             form.querySelectorAll("[aria-invalid='true']").forEach((field) => setFieldError(field, ""));
           } catch (_error) {
             status.textContent = "The message could not be submitted. Check your connection or email the store directly.";
             status.dataset.state = "error";
+          } finally {
+            if (submitButton) submitButton.disabled = false;
           }
           return;
         }
