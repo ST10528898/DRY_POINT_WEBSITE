@@ -646,3 +646,23 @@ img[data-lightbox="true"]{
 .dp-reveal { opacity:0; transform:translateY(.6rem); transition:opacity .35s ease, transform .35s ease; }
 .dp-reveal.is-visible { opacity:1; transform:none; }
 @media (prefers-reduced-motion:reduce) { .dp-reveal { opacity:1; transform:none; transition:none; } }
+
+/* Part 3: FAQ accordion and back-to-top button */
+[data-accordion-button] {
+  display: block;
+  width: 100%;
+  margin-block: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 0.45rem;
+  background: #fff;
+  color: var(--green-900);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+[data-accordion-button][aria-expanded="true"] { background: var(--blue-100); }
+[data-accordion-button]:focus-visible { outline: 0.2rem solid var(--accent); outline-offset: 0.15rem; }
+.dp-back-to-top { position: fixed; right: 1rem; bottom: 1rem; box-shadow: var(--shadow); }
+.dp-back-to-top[hidden] { display: none; }

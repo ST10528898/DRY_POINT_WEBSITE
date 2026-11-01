@@ -666,6 +666,19 @@
     });
   }
 
+   function initBackToTop() {
+    const button = makeElement("button", "dp-button dp-back-to-top", "Back to top");
+    button.type = "button";
+    button.hidden = true;
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.body.appendChild(button);
+    window.addEventListener("scroll", () => {
+      button.hidden = window.scrollY < 400;
+    }, { passive: true });
+  } 
+
   function initPaymentPage() {
     const form = document.getElementById("payment-form");
     const button = document.getElementById("pay-now");
@@ -727,6 +740,7 @@
     initAccordions();
     initRevealAnimations();
     initPaymentPage();
+    initBackToTop();
 
     window.addEventListener("storage", (event) => {
       if (event.key === CART_STORAGE_KEY) {

@@ -79,7 +79,8 @@ All pages are linked through the navigation links at the top of each page. Befor
 => added a meta ROBOTS tag on the cart and payment Page. Created new helper files called robots.txt and sitemap.xml to help guide search engine robots around my website. Added styling to the navigation bar on the enquiry page with a new style inset on the stylesheet  
 => Added a javascript file and linked it across all html pages and also added new products to the catalog 
 => compressed the images from png to jpeg. Linked the to all pages that had png images 
-=> updated the meta keywords content on every html page. 
+=> updated the meta keywords content on every html page.
+=> Added alt text to the logo on each html page. Added FAQ's and their answers on the about page.  Added a back to top button on javascript and Added styling (Updated the stylesheet) to the button and FAQ's.
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
