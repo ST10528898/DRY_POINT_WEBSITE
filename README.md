@@ -69,7 +69,18 @@ All pages are linked through the navigation links at the top of each page. Befor
 7. Test the payment form with fields empty and completed.
 8. Test the phone, email and map links.
 9. Test the layout in at least two browsers.
+=================================================
 
+## Part 3 features
+Feature	|     Where to find it
+Interactive elements (FAQ accordion, back-to-top button, live cart count)   : about.html, every page, js/script.js
+Interactive maps    : contact.html
+Gallery lightbox with previous/next : products.html, about.html
+Dynamic product search and sorting	: products.html
+SEO: titles, keywords, descriptions, image names and alt text	: <head> of every page, images/
+Enquiry and contact forms with validation and email sending : enquiry.html, contact.html
+
+=================================================
 ## Changelog
 **v3.0**
 => Updated the contact details into a more advanced form
