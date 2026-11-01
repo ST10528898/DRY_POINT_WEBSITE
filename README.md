@@ -25,6 +25,8 @@ Provide clear product, pricing, cart, payment and contact information.
 `payment.html`: payment details form and order summary.
 `contact.html`: phone, email, address and map links.
 `sitemap.html`: visual sitemap of the website pages.
+`enquiry.html`:
+` 
 
 ## /*Typography*/
 Headings use a responsive `clamp()` scale and a serif display font. Body text uses a readable sans-serif font. The stylesheet also controls heading colour, line height, letter spacing, paragraph spacing and link readability.
@@ -86,6 +88,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => Added no-results message to product search and live cart item count in navigation
 => Added plain-English validation messages and a personalised confirmation after the form is sent using javascript
 => Added radio group, consent and newsletter checkboxes and form service fields to contact and enquiry forms and added styling to thse additions
+=> FIxed the contant and enquiry page in the fields of sending a message to the store or sending an equiry.
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
@@ -106,6 +109,9 @@ Added a detailed testing checklist and screenshot evidence requirements for desk
 - **v1.2:** Added the picture of the brand founder and introduced styling to all pages.
 - **v1.1:** Linked all pages through shared navigation, added homepage contact access, improved mobile navigation behaviour and documented the VS Code workflow.
 - **v1.0:** Created the Dry Point six-page website structure, catalogue, cart section, payment, contact page, sitemap, about page and README.
+
+
+
 
 ## References
 

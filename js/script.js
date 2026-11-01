@@ -441,6 +441,7 @@
 
         const valid = field.checkValidity();
     setFieldError(field, valid ? "" : friendlyMessage(field));
+    return valid;
   }
 
   function validateForm(form) {
@@ -547,6 +548,7 @@
           }
           return;
         }
+      
 
         status.textContent = `Opening your email app to address ${form.dataset.recipient || CONTACT_EMAIL}. Review the draft and press Send in your email app.`;
         status.dataset.state = "pending";

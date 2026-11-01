@@ -46,18 +46,17 @@
 
 <h2>Send the store a message</h2>
 <p>Fields marked * are required.</p>
-<form id="contact-form"
-data-ajax-endpoint="https://api.web3forms.com/submit"
-
+<form id="contact-form" action="mailto:st10528898@rcconnect.edu.za"
+data-ajax-endpoint="https://formspree.io/f/xnppgrnq"
       data-site-form="contact"
       data-recipient="st10528898@rcconnect.edu.za"
-      action="mailto:st10528898@rcconnect.edu.za"
       method="post"
       enctype="text/plain">
 
-      <input type="hidden" name="access_key" value="https://formspree.io/f/xnppgrnq">
-<input type="hidden" name="subject" value="New message from the Dry Point contact form">
-<input type="hidden" name="from_name" value="Dry Point website">
+<input type="hidden" name="_subject" value="New message from the Dry Point contact form">
+
+
+
   <p>
     <label for="contact-name">Full name</label>
     <input id="contact-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name">
