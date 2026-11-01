@@ -45,12 +45,19 @@
 </ul>
 
 <h2>Send the store a message</h2>
+<p>Fields marked * are required.</p>
 <form id="contact-form"
+data-ajax-endpoint="https://api.web3forms.com/submit"
+
       data-site-form="contact"
       data-recipient="st10528898@rcconnect.edu.za"
       action="mailto:st10528898@rcconnect.edu.za"
       method="post"
       enctype="text/plain">
+
+      <input type="hidden" name="access_key" value="https://formspree.io/f/xnppgrnq">
+<input type="hidden" name="subject" value="New message from the Dry Point contact form">
+<input type="hidden" name="from_name" value="Dry Point website">
   <p>
     <label for="contact-name">Full name</label>
     <input id="contact-name" name="name" type="text" required minlength="2" maxlength="80" autocomplete="name">
@@ -77,7 +84,20 @@
     <label for="contact-message">Message</label>
     <textarea id="contact-message" name="message" required minlength="10" maxlength="1500" rows="6"></textarea>
   </p>
-  <button type="submit">Prepare email</button>
+  <fieldset>
+  <legend>How should we reply?</legend>
+  <label><input type="radio" name="replyMethod" value="Email" checked> Email</label>
+  <label><input type="radio" name="replyMethod" value="Phone"> Phone</label>
+</fieldset>
+<p>
+  <label><input id="contact-consent" type="checkbox" name="consent" value="Yes" required>
+    I agree that Dry Point may contact me about this message.</label>
+</p>
+<p>
+  <label><input id="contact-newsletter" type="checkbox" name="newsletter" value="Yes">
+    Send me news about new collections (optional).</label>
+</p>
+  <button type="submit">Send message</button>
 </form>
 
 
