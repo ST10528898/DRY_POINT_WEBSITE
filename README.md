@@ -82,6 +82,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => updated the meta keywords content on every html page.
 => Added alt text to the logo on each html page. Added FAQ's and their answers on the about page.  Added a back to top button on javascript and Added styling (Updated the stylesheet) to the button and FAQ's.
 => Embed interactive maps for store and collection area in contact page with directions link.
+=> Add previous/next buttons, arrow-key navigation and image counter to gallery lightbox on javascript and the stylesheet
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.

@@ -666,3 +666,8 @@ img[data-lightbox="true"]{
 [data-accordion-button]:focus-visible { outline: 0.2rem solid var(--accent); outline-offset: 0.15rem; }
 .dp-back-to-top { position: fixed; right: 1rem; bottom: 1rem; box-shadow: var(--shadow); }
 .dp-back-to-top[hidden] { display: none; }
+
+/* Part 3: lightbox navigation */
+.dp-lightbox-controls { display: flex; justify-content: space-between; gap: 0.5rem; }
+.dp-lightbox-controls[hidden] { display: none; }
+.dp-lightbox-caption { margin: 0 0 0.75rem; text-align: center; }

@@ -562,7 +562,13 @@
     closeButton.type = "button";
     const preview = makeElement("img", "dp-lightbox-image");
     const caption = makeElement("p", "dp-lightbox-caption");
-    dialog.append(closeButton, preview, caption);
+        const prevButton = makeElement("button", "dp-button dp-lightbox-nav", "Previous");
+    const nextButton = makeElement("button", "dp-button dp-lightbox-nav", "Next");
+    prevButton.type = "button";
+    nextButton.type = "button";
+    const navControls = makeElement("div", "dp-lightbox-controls");
+    navControls.append(prevButton, nextButton);
+    dialog.append(closeButton, preview, caption, navControls);
     document.body.appendChild(dialog);
 
     function closeLightbox() {
@@ -573,10 +579,30 @@
       }
     }
 
-    function showImage(image) {
+    let gallery = [];
+    let galleryIndex = 0;
+
+    function paint(image) {
       preview.src = image.currentSrc || image.src;
       preview.alt = image.alt;
-      caption.textContent = image.alt;
+      caption.textContent = gallery.length > 1
+        ? `${image.alt} (${galleryIndex + 1} of ${gallery.length})`
+        : image.alt;
+      navControls.hidden = gallery.length < 2;
+    }
+
+    function stepImage(direction) {
+      if (gallery.length < 2) return;
+      galleryIndex = (galleryIndex + direction + gallery.length) % gallery.length;
+      paint(gallery[galleryIndex]);
+    }
+
+    function showImage(image) {
+      gallery = productBrowser && productBrowser.contains(image)
+        ? Array.from(productBrowser.querySelectorAll('img[data-lightbox="true"]'))
+        : images;
+      galleryIndex = Math.max(0, gallery.indexOf(image));
+      paint(image);
       if (typeof dialog.showModal === "function") {
         dialog.showModal();
       } else {
@@ -615,6 +641,13 @@
         showImage(image);
       });
     }
+
+    prevButton.addEventListener("click", () => stepImage(-1));
+    nextButton.addEventListener("click", () => stepImage(1));
+    dialog.addEventListener("keydown", (event) => {
+      if (event.key === "ArrowLeft") stepImage(-1);
+      if (event.key === "ArrowRight") stepImage(1);
+    });
 
     closeButton.addEventListener("click", closeLightbox);
     dialog.addEventListener("click", (event) => {
