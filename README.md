@@ -77,6 +77,7 @@ All pages are linked through the navigation links at the top of each page. Befor
 => added an FAQ section on the about page and added a new style section on the stylesheet. linked the enquiry page to all the navigation bars of every html page and added the navigation of every other html page to the enquiry page
 => Added new meta data and updated the titles of all html pages. Used the meta description tag to explain more about each of the html pages 
 => added a meta ROBOTS tag on the cart and payment Page. Created new helper files called robots.txt and sitemap.xml to help guide search engine robots around my website. Added styling to the navigation bar on the enquiry page with a new style inset on the stylesheet  
+=> Added a javascript file and linked it across all html pages and also added new products to the catalog 
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
