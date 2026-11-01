@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DEPLOYED-DOMAIN/</loc></url>
-  <url><loc>https://YOUR-DEPLOYED-DOMAIN/about.html</loc></url>
-  <url><loc>https://YOUR-DEPLOYED-DOMAIN/products.html</loc></url>
-  <url><loc>https://YOUR-DEPLOYED-DOMAIN/enquiry.html</loc></url>
-  <url><loc>https://YOUR-DEPLOYED-DOMAIN/contact.html</loc></url>
-  <url><loc>https://YOUR-DEPLOYED-DOMAIN/sitemap.html</loc></url>
+  <url><loc>https://st10528898.github.io/DRY_POINT_WEBSITE/</loc></url>
+  <url><loc>https://st10528898.github.io/DRY_POINT_WEBSITE/about.html</loc></url>
+  <url><loc>https://st10528898.github.io/DRY_POINT_WEBSITE/products.html</loc></url>
+  <url><loc>https://st10528898.github.io/DRY_POINT_WEBSITE/contact.html</loc></url>
+  <url><loc>https://st10528898.github.io/DRY_POINT_WEBSITE/enquiry.html</loc></url>
+  <url><loc>https://st10528898.github.io/DRY_POINT_WEBSITE/sitemap.html</loc></url>
 </urlset>
