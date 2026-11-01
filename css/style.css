@@ -671,3 +671,12 @@ img[data-lightbox="true"]{
 .dp-lightbox-controls { display: flex; justify-content: space-between; gap: 0.5rem; }
 .dp-lightbox-controls[hidden] { display: none; }
 .dp-lightbox-caption { margin: 0 0 0.75rem; text-align: center; }
+
+/* search feedback */
+.dp-empty-state { 
+  grid-column: 1 / -1; 
+  padding: 1rem; 
+  border-left: 0.35rem solid var(--green-500); 
+  border-radius: 0.35rem; 
+  background: var(--blue-100); 
+}

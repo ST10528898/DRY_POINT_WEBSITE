@@ -66,12 +66,20 @@
     }
   }
 
+  function updateCartBadge() {
+    const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.querySelectorAll('nav a[href="cart.html"]').forEach((link) => {
+      link.textContent = count > 0 ? `Cart (${count})` : "Cart";
+    });
+  }
+
   function saveCart() {
     try {
       window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     } catch (_error) {
       // The in-memory cart still works if the browser blocks local storage.
     }
+    updateCartBadge();
   }
 
   function getCartTotal() {
@@ -293,6 +301,14 @@
       card.appendChild(button);
       grid.appendChild(card);
     });
+
+    if (visibleProducts.length === 0) {
+      grid.appendChild(makeElement(
+        "p",
+        "dp-empty-state",
+        `No products match "${searchValue.trim()}". Try a different word or clear the search box.`
+      ));
+    }
 
     resultCount.textContent = visibleProducts.length === 1
       ? "1 product shown"
@@ -774,6 +790,7 @@
     initRevealAnimations();
     initPaymentPage();
     initBackToTop();
+    updateCartBadge();
 
     window.addEventListener("storage", (event) => {
       if (event.key === CART_STORAGE_KEY) {
