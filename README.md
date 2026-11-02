@@ -102,6 +102,7 @@ Enquiry and contact forms with validation and email sending : enquiry.html, cont
 => FIxed the contant and enquiry page in the fields of sending a message to the store or sending an equiry.
 => Compressed all images from png to jpeg for faster loading time and update thier links to all the html pages that contain them 
 => Replace placeholder domain with live GitHub Pages address in sitemap.xml and robots.txt
+=> Restyled the headings of all html pages to begin with the page description followed by the dry point logo.
 -**v2.0**
 added a CSS stylesheet that is shared by `index.html`, `about.html`, `products.html`, `cart.html`, `payment.html`, `contact.html` and `sitemap.html`.
 Added a CSS reset and reusable custom properties for the colour palette, spacing, borders, shadows, content width and corner radius.
